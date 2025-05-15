@@ -1,5 +1,102 @@
-* {
-    padding: 0;
-    box-sizing: border-box;
+body {
     margin: 0;
-}
+    font-family: Arial, sans-serif;
+  }
+  
+  nav a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+  
+  nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* Para o link ativo (página atual) */
+  nav a.ativo::after {
+    width: 100%; /* Linha já visível */
+    transition: none; /* Sem animação */
+  }
+  
+  nav a.ativo:hover::after {
+    width: 100%; /* Mantém a linha fixa ao passar o mouse */
+  }
+  
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #9999;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav {
+    display: flex;
+    gap: 210px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 5px;
+    position: relative;
+  }
+  
+  .nav-link:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #D9D9D9;
+  }
+  
+  .nav-link.active {
+    border-bottom: 2px solid #D9D9D9;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 20px;
+  }
+  
+  .search-box input {
+    border: none;
+    outline: none;
+  }
+  
+  .search-icon {
+    cursor: pointer;
+  }
+
+  .logo-img {
+    height: 40px;
+    object-fit: contain;
+  }
+  
